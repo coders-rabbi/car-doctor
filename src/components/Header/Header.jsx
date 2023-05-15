@@ -1,12 +1,13 @@
-import React from 'react';
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.svg"
 
 const Header = () => {
     const navItems = <>
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Service</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Contact</a></li> 
+        <li><Link>Home</Link></li>
+        <li><Link>About</Link></li>
+        <li><Link>Service</Link></li>
+        <li><Link>Blog</Link></li>
+        <li><Link>Contact</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -19,7 +20,10 @@ const Header = () => {
                         {navItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <div>
+                    <a className="btn btn-ghost normal-case text-xl">
+                        <img src={logo} alt="" />
+                    </a></div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
